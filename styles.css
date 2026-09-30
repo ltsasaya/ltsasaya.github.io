@@ -15,10 +15,9 @@
 * { box-sizing: border-box; }
 body { margin: 0; overflow-wrap: anywhere; }
 html { scroll-behavior: smooth; }
-.section-navigation { position: fixed; left: 8px; top: calc(50% - 20px); z-index: 6; padding: 4px; width: 40px; height: 40px; overflow: hidden; background: rgb(235 237 233 / 72%); backdrop-filter: blur(6px); border-radius: 4px; transition: width 180ms ease, height 180ms ease; }
-.section-navigation[data-expanded="true"] { width: 116px; height: 180px; }
+.section-navigation { position: fixed; left: 8px; top: calc(50% - 20px); z-index: 6; padding: 4px; width: 40px; height: 40px; background: rgb(235 237 233 / 72%); backdrop-filter: blur(6px); border-radius: 4px; }
 .section-navigation[hidden], .section-nav[hidden] { display: none; }
-.section-nav { display: flex; flex-direction: column; gap: 4px; opacity: 0; transform: translate(-6px, -4px); visibility: hidden; transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms; }
+.section-nav { position: absolute; left: 40px; top: -54px; display: flex; flex-direction: column; gap: 4px; padding: 4px; background: rgb(235 237 233 / 72%); backdrop-filter: blur(6px); border-radius: 4px; opacity: 0; transform: translateX(-12px); visibility: hidden; transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms; }
 .section-navigation[data-expanded="true"] .section-nav { opacity: 1; transform: translate(0, 0); visibility: visible; transition-delay: 0s; }
 .section-nav-toggle { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 0; background: transparent; color: var(--blue); font: inherit; cursor: pointer; }
 .section-nav-toggle:hover { background: var(--sand); }
